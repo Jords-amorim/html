@@ -1,0 +1,3 @@
+getArea() {
+    console.log('cord')
+}

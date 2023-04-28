@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+h1 {
+    background: gold;
+}
+
+ .img {
+    position: absolute;
+ }
+
+ .poly {
+    display: none;
+    position: absolute;
+    top: 142px;
+    left: 164px;
+    opacity: 0.4;
+ }
+
+ .pin {
+    display: none;
+    position: absolute;
+    width: 5%;
+    top: 30px;
+    left: 230px;
+    cursor: pointer;
+ }
+
+ .pin:hover {
+    width: 6%;
+ }
+
+ .modal {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    padding: 5px;
+    background-color: teal;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    top: 80px;
+    left: 330px;
+    
+ }
+
+ .area:hover{
+    cursor: pointer;
+ }

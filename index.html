@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/area.css" media="screen" />
+</head>
+
+<body>
+    <div>
+        <img src="./assets/test_1.jpeg" usemap="#mapaBrasil" class="img">
+        <map name="mapaBrasil">
+            <!-- TODO: aprender a desenhar as coordenadas da tag area, alterar o shape para poly -->
+            <area class="area" id="area1" alt="Minas Gerais" shape="circle" nohref coords="264,142,50">
+
+        </map>
+        <!-- TODO: aprender a desenhar as coordenadas do polyline -->
+        <svg id="poly" class="poly">
+            <polyline points="150,20 40,25 80,80 80,120 120,160 160,200,100,50"
+                style="fill:rgb(219, 227, 219);stroke:black;stroke-width:3" />
+        </svg>
+
+        <!-- Pin -->
+        <img src="./assets/pin-clipart-svg-1.png" id="pin" class="pin">
+
+
+    </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <p>texto </p>
+    </div>
+
+    <script>
+        var test = document.getElementById("area1");
+        var poly = document.getElementById("poly");
+        var pin = document.getElementById("pin");
+        var modal = document.getElementById("modal");
+
+
+        test.addEventListener("mouseover", function (event) {
+            poly.style.display = "block";
+            pin.style.display = "block";
+        });
+
+        test.addEventListener("mouseout", function (event) {
+            poly.style.display = "none";
+            // pin.style.display = "none";
+        });
+
+        // PIN
+        pin.addEventListener("mouseover", function (event) {
+            modal.style.display = "block";
+        });
+        pin.addEventListener("mouseout", function (event) {
+            modal.style.display = "none";
+        });
+    </script>
+
+</body>
+
+
+
+</html>
+
+<!-- 
+    area vai definir uma área clicável através de definições de shapes e formas
+    display padrão é none
+    contido pela tag map
+    não tem filhos
+ -->
